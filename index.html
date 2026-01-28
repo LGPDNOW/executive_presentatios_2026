@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time de IA - Bravonix 2025/2026</title>
+    <link rel="icon" type="image/png" href="icon-bravonix-mini.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: #0f172a;
+            overflow: hidden;
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slide {
+            width: 95%;
+            max-width: 1500px;
+            height: 94vh;
+            background: #1e293b;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            padding: 45px 55px;
+            display: none;
+            flex-direction: column;
+            position: relative;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 25px;
+            left: 55px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Gradiente Bravonix */
+        .gradient-bravonix {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #6366f1 100%);
+        }
+
+        h1 {
+            color: #f1f5f9;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            color: #f1f5f9;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        h3 {
+            color: #3b82f6;
+            font-size: 1.6em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #cbd5e1;
+            font-size: 1.3em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: #cbd5e1;
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        /* Cards Style */
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
+        }
+
+        .card h3 {
+            color: #1e293b;
+            margin-top: 0;
+        }
+
+        .card h4 {
+            color: #475569;
+        }
+
+        .card p, .card li {
+            color: #64748b;
+        }
+
+        .card.blue {
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-color: #93c5fd;
+        }
+
+        .card.warning {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-color: #fcd34d;
+        }
+
+        .card.danger {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-color: #fca5a5;
+        }
+
+        .card.success {
+            background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+            border-color: #86efac;
+        }
+
+        .card.purple {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-color: #d8b4fe;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.blue {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge.red {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .badge.yellow {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge.green {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .badge.purple {
+            background: #f3e8ff;
+            color: #6b21a8;
+        }
+
+        /* Highlight Box */
+        .highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 24px;
+            border-radius: 16px;
+            border-left: 5px solid #f59e0b;
+            margin: 20px 0;
+        }
+
+        .highlight h3 {
+            color: #92400e;
+        }
+
+        .highlight p, .highlight li {
+            color: #78350f;
+        }
+
+        /* Metrics */
+        .metric {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .metric-value {
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label {
+            color: #64748b;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* Team Structure */
+        .team-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 12px 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .team-box h4 {
+            color: #1e293b;
+            margin-top: 0;
+        }
+
+        .team-box p {
+            color: #64748b;
+        }
+
+        /* Pagination Dots */
+        .pagination {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #475569;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #3b82f6;
+            width: 32px;
+            border-radius: 5px;
+        }
+
+        .dot:hover {
+            background: #64748b;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.2em;
+            font-weight: 800;
+            color: #f1f5f9;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .ai {
+            color: #3b82f6;
+        }
+
+        /* Content Scroll */
+        .content-scroll {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        .content-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content-scroll::-webkit-scrollbar-track {
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        .content-scroll::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+
+        /* Hero Section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #6366f1 100%);
+            border-radius: 24px;
+            padding: 40px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255,255,255,0.05);
+            border-radius: 0 0 0 100%;
+        }
+
+        /* Icons */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .slide {
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Capa -->
+        <div class="slide active">
+            <div class="slide-number">1/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center;">
+                <div style="width: 100%; max-width: 900px;">
+                    <p style="font-size: 0.85em; text-transform: uppercase; font-weight: 700; letter-spacing: 3px; color: #8b5cf6; margin-bottom: 20px;">Bravonix AI</p>
+                    <h1 style="font-size: 3.5em; margin-bottom: 20px; color: #f1f5f9; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1;">Time de Inteligência Artificial</h1>
+                    <div style="width: 120px; height: 3px; background: #8b5cf6; margin: 25px auto;"></div>
+                    <p style="font-size: 1.4em; color: #94a3b8; margin-bottom: 15px; font-weight: 600;">Retrospectiva 2025 e Perspectivas Estratégicas 2026</p>
+                    <p style="font-size: 1em; color: #64748b; margin-top: 30px;">Apresentação Executiva</p>
+                    <p style="font-size: 1.2em; color: #f1f5f9; font-weight: 700; margin-top: 8px;">Maelson M. de Lima</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Estrutura do Time -->
+        <div class="slide">
+            <div class="slide-number">2/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Estrutura de IA</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Divisão estratégica entre Tradicional e Generativa</p>
+                </div>
+
+                <!-- Head Card -->
+                <div style="background: #0f172a; color: white; padding: 14px 35px; border-radius: 14px; text-align: center; margin-bottom: 30px; border: 2px solid #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #3b82f6; margin-bottom: 5px;">Head de IA</p>
+                    <h4 style="font-size: 1.25em; font-weight: 700; color: white; margin: 0;">Maelson M. de Lima</h4>
+                </div>
+
+                <!-- Managers Grid -->
+                <div class="grid-3" style="width: 100%; gap: 24px; margin-top: 0;">
+                    <!-- DevOps -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: center; border: 1px solid #e2e8f0;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #64748b; margin-bottom: 10px;">DevOps</p>
+                        <h4 style="font-weight: 700; color: #1e293b; margin: 0; font-size: 1.1em;">Melque Dias</h4>
+                        <p style="font-size: 0.8em; color: #64748b; margin-top: 4px;">Reporte Direto</p>
+                    </div>
+
+                    <!-- IA Generativa -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: center; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">IA Generativa</p>
+                        <h4 style="font-weight: 700; color: #1e293b; margin: 0; font-size: 1.1em;">Jesse Fernandes</h4>
+                        <p style="font-size: 0.8em; color: #64748b; margin-top: 4px; margin-bottom: 14px;">Gestor + Comercial IBM</p>
+                        <div style="border-top: 1px solid #e2e8f0; padding-top: 12px;">
+                            <div style="background: #f8fafc; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; font-size: 0.85em; color: #475569;">Henrique Moura</div>
+                            <div style="background: #f8fafc; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; font-size: 0.85em; color: #475569;">Arthur Penha</div>
+                            <div style="background: #f8fafc; padding: 6px 10px; border-radius: 6px; font-size: 0.85em; color: #475569;">Ryan Jorvino</div>
+                        </div>
+                    </div>
+
+                    <!-- IA Tradicional -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: center; border: 1px solid #e2e8f0; border-top: 4px solid #3b82f6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #3b82f6; margin-bottom: 10px;">IA Tradicional (Studio)</p>
+                        <h4 style="font-weight: 700; color: #1e293b; margin: 0; font-size: 1.1em;">Diego Costa</h4>
+                        <p style="font-size: 0.8em; color: #64748b; margin-top: 4px; margin-bottom: 14px;">Gestor Watsonx Studio</p>
+                        <div style="border-top: 1px solid #e2e8f0; padding-top: 12px;">
+                            <div style="background: #f8fafc; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; font-size: 0.85em; color: #475569;">Pamella Farias</div>
+                            <div style="background: #f8fafc; padding: 6px 10px; border-radius: 6px; font-size: 0.85em; color: #475569;">Euclides Oliveira</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hiring Alert -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 25px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Hiring Roadmap</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">
+                        • Contratação pendente de <strong style="color: white;">Analista de Requisitos de IA</strong> (previsto Jul/2025) - Essencial para mitigar falhas de escopo na Proderj.<br>
+                        • <strong style="color: white;">Carol - Dev Frontend</strong> contratada, porém alocada temporariamente no time de Inventário de Dados.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Infraestrutura -->
+        <div class="slide">
+            <div class="slide-number">3/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Infraestrutura de Produtos</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Plataformas dedicadas para showcase e consumo de APIs</p>
+                </div>
+
+                <div class="grid-2" style="width: 100%; gap: 30px;">
+                    <!-- Bravonix.ia.br -->
+                    <div style="background: white; padding: 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Catálogo</p>
+                        <h4 style="font-weight: 700; color: #1e293b; margin: 0; font-size: 1.3em;">Bravonix.ia.br</h4>
+                        <p style="font-size: 0.85em; color: #64748b; margin-top: 5px; margin-bottom: 18px;">Catálogo de Produtos de IA</p>
+                        <ul style="margin-left: 18px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Showcase de soluções desenvolvidas</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Demonstrações interativas</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Apoio ao time comercial</li>
+                            <li style="color: #475569; font-size: 0.9em;">Consumo rápido para apresentações</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bravonix.api.br -->
+                    <div style="background: white; padding: 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Gateway</p>
+                        <h4 style="font-weight: 700; color: #1e293b; margin: 0; font-size: 1.3em;">Bravonix.api.br</h4>
+                        <p style="font-size: 0.85em; color: #64748b; margin-top: 5px; margin-bottom: 18px;">Gateway de APIs</p>
+                        <ul style="margin-left: 18px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Documentação técnica completa</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Gestão de endpoints</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Controle de acesso</li>
+                            <li style="color: #475569; font-size: 0.9em;">Monitoramento de consumo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Objetivo Estratégico -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 24px 30px; margin-top: 30px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Objetivo Estratégico</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 1em; line-height: 1.6;">Facilitar o acesso e demonstração de nossas soluções de IA através de plataformas dedicadas, acelerando o processo comercial e técnico.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: BravoDoc -->
+        <div class="slide">
+            <div class="slide-number">4/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">BravoDoc</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Gestão Documental Inteligente</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Sistema gerenciador de documentos públicos com foco em geração automatizada de ETP e Termos de Referência.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Clientes:</strong> PMJP, Ata Proderj</p>
+                </div>
+
+                <!-- Grid Riscos e Mitigação -->
+                <div class="grid-2" style="width: 100%; gap: 24px;">
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos Identificados</p>
+                        <ul style="margin-left: 18px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Não integrado com plataforma IBM</li>
+                            <li style="color: #475569; font-size: 0.9em;">Dependência de providers externos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Mitigação -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 18px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Treinamento em governança IBM</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 6px;">Implementação de guardrails avançados</li>
+                            <li style="color: #475569; font-size: 0.9em;">Roadmap para migração de modelos internos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Tecnologias -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 12px 0; font-size: 1em;">Tecnologias Utilizadas</h4>
+                    <div>
+                        <span style="display: inline-block; background: #1e293b; color: #e2e8f0; padding: 6px 14px; border-radius: 8px; font-size: 0.85em; margin: 4px;">IA Generativa</span>
+                        <span style="display: inline-block; background: #1e293b; color: #e2e8f0; padding: 6px 14px; border-radius: 8px; font-size: 0.85em; margin: 4px;">OCR Processing</span>
+                        <span style="display: inline-block; background: #1e293b; color: #e2e8f0; padding: 6px 14px; border-radius: 8px; font-size: 0.85em; margin: 4px;">Templates Parametrizáveis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: BravoSim -->
+        <div class="slide">
+            <div class="slide-number">5/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">BravoSim</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Simulador Previdenciário Inteligente</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Sistema de simulações precisas de aposentadoria com cálculos automatizados e análise de cenários de impacto em folha.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Cliente:</strong> IPMJP (Instituto de Previdência Municipal de João Pessoa)</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Diferenciais -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Diferenciais</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Algoritmos validados por especialista</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Análise multi-cenários</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Projeções de impacto em folha</li>
+                            <li style="color: #475569; font-size: 0.85em;">Dev colaborativo com PMJP</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Sem previsão financeira de retorno</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">2 devs alocados sem orçamento</li>
+                            <li style="color: #475569; font-size: 0.85em;">Escopo não comercializado</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Formalizar escopo completo</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Metrificar e precificar projeto</li>
+                            <li style="color: #475569; font-size: 0.85em;">Apresentação com ROI estimado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Status do Projeto</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Produto em desenvolvimento ativo com validação técnica do IPMJP. Necessita formalização comercial e definição de precificação para sustentabilidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: SmartITBI -->
+        <div class="slide">
+            <div class="slide-number">6/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">SmartITBI</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Cálculo Inteligente de ITBI</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Sistema para cálculo inteligente de ITBI com modelos preditivos, extração documental e pesquisa web de perfis imobiliários.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Responsável Técnico:</strong> Arthur Penha</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Capacidades -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Capacidades Técnicas</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">ML para precificação imobiliária</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Web scraping de mercado</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Análise comparativa automatizada</li>
+                            <li style="color: #475569; font-size: 0.85em;">Extração inteligente de docs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Dev sobrecarregado com Blankstate</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Desvio para tarefas administrativas</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Baixo aproveitamento técnico</li>
+                            <li style="color: #475569; font-size: 0.85em;">Falta de foco em IA</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Remover Arthur de demandas não-IA</li>
+                            <li style="color: #475569; font-size: 0.85em;">Priorizar SmartITBI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Decisão Estratégica</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Realocação do desenvolvedor para foco total no produto SmartITBI, eliminando dispersão em atividades administrativas e não relacionadas a IA.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: BravoBot -->
+        <div class="slide">
+            <div class="slide-number">7/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">BravoBot</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">1ª Geração - Assistente LGPD</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Contexto Histórico</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Primeiro agente de IA da Bravonix, assistente especializado em LGPD.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Clientes:</strong> IGEPS, ETIPI, PMJP, uso interno</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Arquitetura -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Arquitetura Técnica</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">PostgreSQL com pgvector</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Controle de consumo de tokens</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Busca web inteligente</li>
+                            <li style="color: #475569; font-size: 0.85em;">Base de conhecimento LGPD</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Baixíssimo engajamento</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Desuso progressivo pelos clientes</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">ROI questionável como standalone</li>
+                            <li style="color: #475569; font-size: 0.85em;">Manutenção sem retorno</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Descontinuação oficial</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Migrar funcionalidades p/ BravoCore</li>
+                            <li style="color: #475569; font-size: 0.85em;">Comunicar clientes sobre transição</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Lição Aprendida -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Lição Aprendida</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.95em; line-height: 1.6;"><strong style="color: white;">Bots isolados agregam pouco valor.</strong> O futuro está em orquestradores multi-agente que integram múltiplas especialidades e fontes de dados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: BravoCore -->
+        <div class="slide">
+            <div class="slide-number">8/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">BravoCore</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">2ª Geração - Factory de Agentes IA</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;">Núcleo de agentes de IA consumíveis via API, funcionando como <strong style="color: #1e293b;">factory de assistentes personalizáveis</strong>. Evolução direta do BravoBot.</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Diferenciais -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Diferenciais</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Orquestrador multi-agentes</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Assistentes de nicho com CDN</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Gestão de bases de conhecimento</li>
+                            <li style="color: #475569; font-size: 0.85em;">Arquitetura API-first</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Distribuição fora de compliance</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Dependência total de providers</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Ausência de infra própria</li>
+                            <li style="color: #475569; font-size: 0.85em;">Vulnerabilidade LGPD</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Aquisição de servidor GPU</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Deploy de modelos próprios</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Compliance nativo</li>
+                            <li style="color: #475569; font-size: 0.85em;">Soberania tecnológica</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Ação Urgente</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Aquisição de servidor com GPU para deploy de modelos próprios, garantindo compliance nativo e inclusão em contratos de grande porte.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Assistente Procon -->
+        <div class="slide">
+            <div class="slide-number">9/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Assistente Procon</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Automação de Atendimento PMJP</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Assistente de IA com workflow N8N para automação completa de atendimento do Procon PMJP.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Integrações:</strong> WhatsApp Business API, Base Procon, Sistema de boletos/multas, Atendimento dual</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Diferenciais -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Diferenciais</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">WhatsApp Business API</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Base de conhecimento Procon</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Sistema boletos/multas</li>
+                            <li style="color: #475569; font-size: 0.85em;">Atendimento dual</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Contrato atrasado sem previsão</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Mudança crítica: Integração Oracle</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Refatoração de escopo necessária</li>
+                            <li style="color: #475569; font-size: 0.85em;">Reavaliação técnica completa</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Acelerar contratação</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Negociar pagamento retroativo</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Reavaliar escopo com Oracle</li>
+                            <li style="color: #475569; font-size: 0.85em;">Novo cronograma de entrega</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Status do Projeto</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Projeto em aguardo de formalização contratual. Necessita reavaliação técnica devido à mudança de integração para Oracle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: ComplianceNow -->
+        <div class="slide">
+            <div class="slide-number">10/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">ComplianceNow</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Framework de Conformidade para IA</p>
+                </div>
+
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Descrição</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 8px;">Sistema framework para análise automatizada de conformidade de sistemas de IA desenvolvidos por organizações.</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Frameworks:</strong> PL 2338/2023 (Regulação IA Brasil) | LGPD | NIST AI RMF</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Diferenciais -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Diferenciais</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Auditoria automatizada de IA</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Identificação de inconformidades</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Metrificação de riscos NIST</li>
+                            <li style="color: #475569; font-size: 0.85em;">Relatórios executivos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Matriz de risco em desenvolvimento</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Validação pendente pelo Comitê</li>
+                            <li style="color: #475569; font-size: 0.85em;">Regulação ainda em evolução</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Finalizar matriz de risco</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Submeter ao Comitê de Dados e IA</li>
+                            <li style="color: #475569; font-size: 0.85em;">Acompanhar evolução regulatória</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Status do Projeto</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;"><strong style="color: white;">Processo de engenharia validado.</strong> Em desenvolvimento: matriz de risco com modelo de cálculo. Aguardando validação pelo Comitê de Dados e IA.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Risco Transversal -->
+        <div class="slide">
+            <div class="slide-number">11/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>🚨 RISCO TRANSVERSAL CRÍTICO</h2>
+            <div class="content-scroll">
+                <div class="card danger">
+                    <h3>Dependência de Providers Externos</h3>
+                    <p style="font-size: 1.2em; font-weight: 700;"><strong>TODOS os projetos</strong> conectados a OpenAI e Anthropic</p>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card warning">
+                        <h3>⚠️ Riscos Identificados</h3>
+                        <ul>
+                            <li>Possível vazamento de dados pessoais</li>
+                            <li>Não conformidade LGPD</li>
+                            <li>Falta de soberania tecnológica</li>
+                            <li>Custos crescentes não controláveis</li>
+                            <li><strong>Guardrails não são 100% efetivos</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>📊 Impacto Potencial</h3>
+                        <ul>
+                            <li><strong>Jurídico:</strong> Multas LGPD até 2% faturamento</li>
+                            <li><strong>Operacional:</strong> Dependência crítica externa</li>
+                            <li><strong>Financeiro:</strong> Escala de custos insustentável</li>
+                            <li><strong>Reputacional:</strong> Risco de incidentes públicos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-gradient" style="margin-top: 20px;">
+                    <h3 style="color: white; margin-top: 0;">🛡️ Mitigação Estratégica URGENTE</h3>
+                    <div class="grid-2" style="margin-top: 15px;">
+                        <div style="color: rgba(255,255,255,0.95);">
+                            <p><strong>1. Aquisição GPU</strong></p>
+                            <p>Infraestrutura própria imediata</p>
+                            <p style="margin-top: 10px;"><strong>2. Deploy Modelos Open-Source</strong></p>
+                            <p>Llama, Mistral, modelos nacionais</p>
+                        </div>
+                        <div style="color: rgba(255,255,255,0.95);">
+                            <p><strong>3. Camada Compliance Nativa</strong></p>
+                            <p>Integrada à infraestrutura</p>
+                            <p style="margin-top: 10px;"><strong>4. Data Sanitization</strong></p>
+                            <p>Políticas rigorosas de limpeza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: IBM -->
+        <div class="slide">
+            <div class="slide-number">12/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>🤝 Parceria IBM - Watsonx</h2>
+            <div class="content-scroll">
+                <div class="card blue">
+                    <h3>Produtos em Uso</h3>
+                    <ul>
+                        <li><strong>Watsonx Studio</strong> - IA Tradicional e ML</li>
+                        <li><strong>IBM Orchestrate</strong> - Similar ao BravoDoc</li>
+                    </ul>
+                </div>
+
+                <div class="card danger" style="margin-top: 20px;">
+                    <h3>🔴 Desafios Críticos Identificados</h3>
+                    <div class="grid-2" style="margin-top: 15px;">
+                        <div>
+                            <h4>1. Transferência de Conhecimento</h4>
+                            <ul>
+                                <li>Essencial para Ata Rio de Janeiro</li>
+                                <li>Processo lento e fragmentado</li>
+                                <li>Documentação técnica insuficiente</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>2. Comunicação Interna</h4>
+                            <ul>
+                                <li>Excesso de interlocutores IBM</li>
+                                <li>Falta de alinhamento técnico</li>
+                                <li>Alto grau de "achismo" e tentativa-erro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card warning" style="margin-top: 20px;">
+                    <h3>⚠️ Questões de Plataforma</h3>
+                    <p>Curva de aprendizado muito íngreme comparada a outras soluções de mercado</p>
+                    <p>Documentação com baixa qualidade explicativa e falta de exemplos práticos</p>
+                </div>
+
+                <div class="highlight" style="margin-top: 20px;">
+                    <h3>✅ Ações Necessárias Imediatas</h3>
+                    <ul>
+                        <li><strong>Definir POC único</strong> IBM-Bravonix com escopo claro</li>
+                        <li><strong>Treinamento estruturado</strong> com cronograma e entregáveis</li>
+                        <li><strong>SLA de suporte técnico</strong> formalizado em contrato</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: GAIO -->
+        <div class="slide">
+            <div class="slide-number">13/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>📊 GAIO - Decisão Estratégica</h2>
+            <div class="content-scroll">
+                <div class="card warning">
+                    <h3>Status do Contrato</h3>
+                    <p style="font-size: 1.2em;"><strong>Vencido em:</strong> 25/01/2025</p>
+                    <p><strong>Evolução PMJP:</strong> Contrato não evoluiu conforme esperado</p>
+                </div>
+
+                <div class="card danger" style="margin-top: 20px;">
+                    <h3>🚫 DECISÃO: NÃO RENOVAR</h3>
+                    <h4 style="margin-top: 15px;">Análise Crítica:</h4>
+                    <ul>
+                        <li>Baixíssimo consumo efetivo pelos entes públicos</li>
+                        <li>Clientes solicitam ferramentas sem equipe capacitada</li>
+                        <li>Alta frustração de servidores públicos</li>
+                        <li>Desperdício comprovado de recursos públicos</li>
+                        <li><strong>Power BI resolveria as mesmas necessidades com menor custo</strong></li>
+                    </ul>
+                </div>
+
+                <div class="hero-gradient" style="margin-top: 20px;">
+                    <h3 style="color: white; margin-top: 0;">📚 Lições Aprendidas</h3>
+                    <p style="color: rgba(255,255,255,0.95); font-size: 1.1em; margin-bottom: 15px;"><strong>Necessidade de reestruturação do modelo de oferta para entes públicos:</strong></p>
+                    <div class="grid-2">
+                        <ul style="color: rgba(255,255,255,0.9);">
+                            <li>✅ Validação prévia de capacidade técnica</li>
+                            <li>✅ Treinamento obrigatório pré-implantação</li>
+                        </ul>
+                        <ul style="color: rgba(255,255,255,0.9);">
+                            <li>✅ Métricas de adoção como KPI contratual</li>
+                            <li>✅ Avaliação de maturidade antes da venda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Dificuldades Internas -->
+        <div class="slide">
+            <div class="slide-number">14/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>⚙️ Dificuldades Internas</h2>
+            <div class="content-scroll">
+                <div class="card danger">
+                    <h3>🔄 Problema 1: Comunicação Cruzada</h3>
+                    <p><strong>Entre times:</strong> Comercial, Projetos e IA</p>
+                    <ul>
+                        <li>Indefinição de limites e responsabilidades claras</li>
+                        <li>"Disse-me-disse" frequente com clientes</li>
+                        <li>Comunicação cruzada gerando conflitos internos</li>
+                        <li>Retrabalho constante e perda de credibilidade</li>
+                    </ul>
+                </div>
+
+                <div class="card success" style="margin-top: 20px;">
+                    <h3>✅ Solução Proposta</h3>
+                    <div class="grid-2">
+                        <ul>
+                            <li><strong>Matriz RACI formal</strong> definindo responsabilidades</li>
+                            <li>Cliente tem <strong>um único ponto de contato</strong></li>
+                        </ul>
+                        <ul>
+                            <li>Times IA/Projetos falam via Comercial apenas</li>
+                            <li>Rituais de alinhamento semanal obrigatórios</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card warning" style="margin-top: 20px;">
+                    <h3>👥 Problema 2: Perfil Faltante</h3>
+                    <h4>Analista de Requisitos de IA</h4>
+                    <p><strong>Status:</strong> Planejado desde julho/2024</p>
+                    <p><strong>Situação:</strong> Contratação segurada aguardando vitória Ata Rio</p>
+                    <p><strong>Impacto:</strong> Já sentimos dificuldades operacionais na Proderj</p>
+                    <p style="margin-top: 10px;"><strong>Competências Esperadas:</strong></p>
+                    <ul>
+                        <li>Tradução de necessidades de negócio para requisitos IA</li>
+                        <li>Desenho e validação de casos de uso</li>
+                        <li>Interface entre stakeholders e desenvolvedores</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-weight: 700; color: #f59e0b;">⚡ PRIORIDADE: ALTA - Contratar imediatamente após Ata Rio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: Estratégia 2025 -->
+        <div class="slide">
+            <div class="slide-number">15/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>🎯 Estratégia 2025</h2>
+            <div class="content-scroll">
+                <div class="grid-2">
+                    <div class="card success">
+                        <h3>1️⃣ Soberania Tecnológica</h3>
+                        <ul>
+                            <li>Deploy de modelos próprios</li>
+                            <li>Redução de dependência externa</li>
+                            <li>Compliance nativo desde o design</li>
+                            <li>Controle total da infraestrutura</li>
+                        </ul>
+                    </div>
+
+                    <div class="card blue">
+                        <h3>2️⃣ Governança e Compliance</h3>
+                        <ul>
+                            <li>ComplianceNow como diferencial</li>
+                            <li>Certificações e auditorias regulares</li>
+                            <li>Transparência em todos processos</li>
+                            <li>Ética como pilar fundamental</li>
+                        </ul>
+                    </div>
+
+                    <div class="card purple">
+                        <h3>3️⃣ Escala Operacional</h3>
+                        <ul>
+                            <li>Processos padronizados documentados</li>
+                            <li>Documentação técnica completa</li>
+                            <li>Replicabilidade de soluções</li>
+                            <li>Automação de rotinas repetitivas</li>
+                        </ul>
+                    </div>
+
+                    <div class="card warning">
+                        <h3>4️⃣ Excelência em Entrega</h3>
+                        <ul>
+                            <li>Time estruturado e especializado</li>
+                            <li>Comunicação clara com clientes</li>
+                            <li>ROI mensurável e demonstrável</li>
+                            <li>Acompanhamento pós-implantação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Próximos Passos -->
+        <div class="slide">
+            <div class="slide-number">16/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>📅 Roadmap 2025</h2>
+            <div class="content-scroll">
+                <div class="card success">
+                    <h3>Q1 2025 (Jan-Mar)</h3>
+                    <ul>
+                        <li>☐ <strong>CRÍTICO:</strong> Aquisição de servidor GPU</li>
+                        <li>☐ Contratação de Analista de Requisitos IA</li>
+                        <li>☐ Finalização completa treinamento IBM</li>
+                        <li>☐ Descontinuação oficial BravoBot</li>
+                        <li>☐ Fechamento escopo BravoSim com IPMJP</li>
+                        <li>☐ Realocação Arthur - foco SmartITBI</li>
+                    </ul>
+                </div>
+
+                <div class="card blue" style="margin-top: 20px;">
+                    <h3>Q2 2025 (Abr-Jun)</h3>
+                    <ul>
+                        <li>☐ Deploy e testes do primeiro modelo interno</li>
+                        <li>☐ Implementação Matriz RACI inter-times</li>
+                        <li>☐ Refinamento de métricas ComplianceNow</li>
+                        <li>☐ Kick-off oficial projetos Ata Rio</li>
+                        <li>☐ Validação Comitê - ComplianceNow</li>
+                        <li>☐ Migração gradual de clientes para modelos próprios</li>
+                    </ul>
+                </div>
+
+                <div class="hero-gradient" style="margin-top: 20px;">
+                    <h3 style="color: white; margin-top: 0;">🎯 Meta Anual 2025</h3>
+                    <p style="color: rgba(255,255,255,0.95); font-size: 1.3em; font-weight: 600; text-align: center; padding: 10px 0;">
+                        Consolidar a Bravonix como <strong>referência nacional em IA para o setor público brasileiro</strong> com compliance nativo, soberania tecnológica e excelência operacional.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 17: Ata Rio -->
+        <div class="slide">
+            <div class="slide-number">17/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>📋 Ata Rio de Janeiro</h2>
+            <div class="content-scroll">
+                <div class="card success">
+                    <h3>Status da Preparação</h3>
+                    <p style="font-size: 1.1em;">Time estruturado e pronto para atendimento imediato das demandas da Ata Proderj</p>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card blue">
+                        <h3>✅ Recursos Prontos</h3>
+                        <ul>
+                            <li>Estrutura de time completa e organizada</li>
+                            <li>Portfólio robusto de soluções validadas</li>
+                            <li>Processos CI/CD maduros em produção</li>
+                            <li>Parceria IBM estabelecida e ativa</li>
+                            <li>Catálogo de produtos online (bravonix.ia.br)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card warning">
+                        <h3>⏳ Em Andamento</h3>
+                        <ul>
+                            <li>Finalização treinamento IBM Watsonx</li>
+                            <li>Processo seletivo Analista Requisitos</li>
+                            <li>Aquisição GPU (mitigação de riscos)</li>
+                            <li>Padronização processos internos</li>
+                            <li>Documentação técnica completa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight" style="margin-top: 20px;">
+                    <h3>🎯 Demandas Esperadas da Ata</h3>
+                    <div class="grid-2">
+                        <ul>
+                            <li>Desenvolvimento de assistentes especializados</li>
+                            <li>Integração com plataformas governamentais</li>
+                            <li>Soluções de compliance e governança</li>
+                        </ul>
+                        <ul>
+                            <li>Analytics avançado e processamento de dados</li>
+                            <li>Automação de processos complexos com IA</li>
+                            <li>Consultoria em transformação digital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 18: Conclusão -->
+        <div class="slide">
+            <div class="slide-number">18/18</div>
+            <div class="logo">
+                <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
+                <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
+            </div>
+            <h2>🎯 Conclusão</h2>
+            <div class="content-scroll">
+                <div class="hero-gradient">
+                    <h3 style="color: white; margin-top: 0;">Retrospectiva 2024</h3>
+                    <p style="color: rgba(255,255,255,0.95); font-size: 1.15em;">Encerramento com carteira robusta de soluções, estrutura organizacional clara e aprendizados estratégicos valiosos</p>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card success">
+                        <h3>✨ Principais Conquistas</h3>
+                        <ul>
+                            <li><strong>7 produtos</strong> ativos em produção</li>
+                            <li><strong>9 profissionais</strong> especializados estruturados</li>
+                            <li>Múltiplos <strong>clientes públicos</strong> atendidos</li>
+                            <li><strong>Infraestrutura moderna</strong> com CI/CD</li>
+                            <li><strong>Parceria IBM</strong> estabelecida</li>
+                            <li><strong>Catálogo online</strong> de soluções</li>
+                        </ul>
+                    </div>
+
+                    <div class="card warning">
+                        <h3>🎯 Desafios Estratégicos 2025</h3>
+                        <ul>
+                            <li><strong>Soberania tecnológica</strong> via GPU próprio</li>
+                            <li><strong>Fortalecimento IBM</strong> com treinamento</li>
+                            <li><strong>Processos escaláveis</strong> documentados</li>
+                            <li><strong>Contratação estratégica</strong> de requisitos</li>
+                            <li><strong>Execução Ata Rio</strong> com excelência</li>
+                            <li><strong>Compliance nativo</strong> em todas soluções</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card blue" style="margin-top: 20px; text-align: center; padding: 40px;">
+                    <h3 style="margin-top: 0; font-size: 1.8em;">🚀 Visão de Futuro</h3>
+                    <p style="font-size: 1.3em; font-weight: 600; line-height: 1.6; margin-top: 20px;">
+                        Consolidar a Bravonix como <strong style="color: #3b82f6;">referência nacional em IA para o setor público</strong> 
+                        com compliance nativo, excelência técnica e impacto mensurável na transformação digital do Brasil.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const pagination = document.getElementById('pagination');
+
+        // Create pagination dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            pagination.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = n;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === ' ' || e.key === 'Enter') nextSlide();
+        });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+    </script>
+</body>
+</html>
