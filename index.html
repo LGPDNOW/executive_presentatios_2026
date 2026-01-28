@@ -998,52 +998,60 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>🚨 RISCO TRANSVERSAL CRÍTICO</h2>
-            <div class="content-scroll">
-                <div class="card danger">
-                    <h3>Dependência de Providers Externos</h3>
-                    <p style="font-size: 1.2em; font-weight: 700;"><strong>TODOS os projetos</strong> conectados a OpenAI e Anthropic</p>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Risco Transversal Crítico</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Dependência de Providers Externos</p>
                 </div>
 
-                <div class="grid-2" style="margin-top: 20px;">
-                    <div class="card warning">
-                        <h3>⚠️ Riscos Identificados</h3>
-                        <ul>
-                            <li>Possível vazamento de dados pessoais</li>
-                            <li>Não conformidade LGPD</li>
-                            <li>Falta de soberania tecnológica</li>
-                            <li>Custos crescentes não controláveis</li>
-                            <li><strong>Guardrails não são 100% efetivos</strong></li>
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Contexto</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">TODOS os projetos</strong> conectados a OpenAI e Anthropic. Guardrails não são 100% efetivos.</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Impacto -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Impacto Potencial</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Jurídico: Multas LGPD até 2%</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Operacional: Dependência crítica</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Financeiro: Custos insustentáveis</li>
+                            <li style="color: #475569; font-size: 0.85em;">Reputacional: Incidentes públicos</li>
                         </ul>
                     </div>
 
-                    <div class="card">
-                        <h3>📊 Impacto Potencial</h3>
-                        <ul>
-                            <li><strong>Jurídico:</strong> Multas LGPD até 2% faturamento</li>
-                            <li><strong>Operacional:</strong> Dependência crítica externa</li>
-                            <li><strong>Financeiro:</strong> Escala de custos insustentável</li>
-                            <li><strong>Reputacional:</strong> Risco de incidentes públicos</li>
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Vazamento de dados pessoais</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Não conformidade LGPD</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Falta de soberania tecnológica</li>
+                            <li style="color: #475569; font-size: 0.85em;">Custos crescentes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Aquisição de servidor GPU</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Deploy modelos open-source</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Camada compliance nativa</li>
+                            <li style="color: #475569; font-size: 0.85em;">Data sanitization</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="hero-gradient" style="margin-top: 20px;">
-                    <h3 style="color: white; margin-top: 0;">🛡️ Mitigação Estratégica URGENTE</h3>
-                    <div class="grid-2" style="margin-top: 15px;">
-                        <div style="color: rgba(255,255,255,0.95);">
-                            <p><strong>1. Aquisição GPU</strong></p>
-                            <p>Infraestrutura própria imediata</p>
-                            <p style="margin-top: 10px;"><strong>2. Deploy Modelos Open-Source</strong></p>
-                            <p>Llama, Mistral, modelos nacionais</p>
-                        </div>
-                        <div style="color: rgba(255,255,255,0.95);">
-                            <p><strong>3. Camada Compliance Nativa</strong></p>
-                            <p>Integrada à infraestrutura</p>
-                            <p style="margin-top: 10px;"><strong>4. Data Sanitization</strong></p>
-                            <p>Políticas rigorosas de limpeza</p>
-                        </div>
-                    </div>
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Ação Urgente</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Prioridade máxima: aquisição de infraestrutura GPU própria para deploy de modelos Llama/Mistral, garantindo soberania tecnológica e compliance nativo em todos os projetos.</p>
                 </div>
             </div>
         </div>
@@ -1055,51 +1063,61 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>🤝 Parceria IBM - Watsonx</h2>
-            <div class="content-scroll">
-                <div class="card blue">
-                    <h3>Produtos em Uso</h3>
-                    <ul>
-                        <li><strong>Watsonx Studio</strong> - IA Tradicional e ML</li>
-                        <li><strong>IBM Orchestrate</strong> - Similar ao BravoDoc</li>
-                    </ul>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Parceria IBM</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Watsonx Studio e Orchestrate</p>
                 </div>
 
-                <div class="card danger" style="margin-top: 20px;">
-                    <h3>🔴 Desafios Críticos Identificados</h3>
-                    <div class="grid-2" style="margin-top: 15px;">
-                        <div>
-                            <h4>1. Transferência de Conhecimento</h4>
-                            <ul>
-                                <li>Essencial para Ata Rio de Janeiro</li>
-                                <li>Processo lento e fragmentado</li>
-                                <li>Documentação técnica insuficiente</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>2. Comunicação Interna</h4>
-                            <ul>
-                                <li>Excesso de interlocutores IBM</li>
-                                <li>Falta de alinhamento técnico</li>
-                                <li>Alto grau de "achismo" e tentativa-erro</li>
-                            </ul>
-                        </div>
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Produtos na Ata</p>
+                    <p style="color: #475569; font-size: 0.95em; margin-bottom: 6px;"><strong style="color: #1e293b;">Item 1 - IA Tradicional:</strong> Watsonx Studio (ML, modelos preditivos, análise de dados)</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Item 2 - IA Generativa:</strong> IBM Orchestrate (automação de workflows, agentes conversacionais)</p>
+                </div>
+
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Desafios -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Desafios</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Transferência conhecimento lenta</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Documentação insuficiente</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Excesso de interlocutores</li>
+                            <li style="color: #475569; font-size: 0.85em;">Curva de aprendizado íngreme</li>
+                        </ul>
+                    </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Atraso na Ata Rio de Janeiro</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Falta de alinhamento técnico</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Alto grau de tentativa-erro</li>
+                            <li style="color: #475569; font-size: 0.85em;">Falta de exemplos práticos</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Definir POC único com escopo claro</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Treinamento estruturado</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">SLA de suporte formalizado</li>
+                            <li style="color: #475569; font-size: 0.85em;">Cronograma com entregáveis</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="card warning" style="margin-top: 20px;">
-                    <h3>⚠️ Questões de Plataforma</h3>
-                    <p>Curva de aprendizado muito íngreme comparada a outras soluções de mercado</p>
-                    <p>Documentação com baixa qualidade explicativa e falta de exemplos práticos</p>
-                </div>
-
-                <div class="highlight" style="margin-top: 20px;">
-                    <h3>✅ Ações Necessárias Imediatas</h3>
-                    <ul>
-                        <li><strong>Definir POC único</strong> IBM-Bravonix com escopo claro</li>
-                        <li><strong>Treinamento estruturado</strong> com cronograma e entregáveis</li>
-                        <li><strong>SLA de suporte técnico</strong> formalizado em contrato</li>
-                    </ul>
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Ação Necessária</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Formalizar POC único IBM-Bravonix com escopo claro, cronograma de treinamento estruturado e SLA de suporte técnico em contrato.</p>
                 </div>
             </div>
         </div>
@@ -1111,39 +1129,60 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>📊 GAIO - Decisão Estratégica</h2>
-            <div class="content-scroll">
-                <div class="card warning">
-                    <h3>Status do Contrato</h3>
-                    <p style="font-size: 1.2em;"><strong>Vencido em:</strong> 25/01/2025</p>
-                    <p><strong>Evolução PMJP:</strong> Contrato não evoluiu conforme esperado</p>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">GAIO</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Decisão Estratégica - Não Renovar</p>
                 </div>
 
-                <div class="card danger" style="margin-top: 20px;">
-                    <h3>🚫 DECISÃO: NÃO RENOVAR</h3>
-                    <h4 style="margin-top: 15px;">Análise Crítica:</h4>
-                    <ul>
-                        <li>Baixíssimo consumo efetivo pelos entes públicos</li>
-                        <li>Clientes solicitam ferramentas sem equipe capacitada</li>
-                        <li>Alta frustração de servidores públicos</li>
-                        <li>Desperdício comprovado de recursos públicos</li>
-                        <li><strong>Power BI resolveria as mesmas necessidades com menor custo</strong></li>
-                    </ul>
+                <!-- Card Descrição -->
+                <div style="background: white; padding: 24px 28px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6; width: 100%; margin-bottom: 20px;">
+                    <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px;">Status do Contrato</p>
+                    <p style="color: #475569; font-size: 0.95em; margin: 0;"><strong style="color: #1e293b;">Vencido em:</strong> 25/01/2025 | <strong style="color: #1e293b;">Evolução PMJP:</strong> Contrato não evoluiu conforme esperado</p>
                 </div>
 
-                <div class="hero-gradient" style="margin-top: 20px;">
-                    <h3 style="color: white; margin-top: 0;">📚 Lições Aprendidas</h3>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.1em; margin-bottom: 15px;"><strong>Necessidade de reestruturação do modelo de oferta para entes públicos:</strong></p>
-                    <div class="grid-2">
-                        <ul style="color: rgba(255,255,255,0.9);">
-                            <li>✅ Validação prévia de capacidade técnica</li>
-                            <li>✅ Treinamento obrigatório pré-implantação</li>
-                        </ul>
-                        <ul style="color: rgba(255,255,255,0.9);">
-                            <li>✅ Métricas de adoção como KPI contratual</li>
-                            <li>✅ Avaliação de maturidade antes da venda</li>
+                <!-- Grid 3 colunas -->
+                <div class="grid-3" style="width: 100%; gap: 20px;">
+                    <!-- Análise Crítica -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Análise Crítica</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Baixíssimo consumo efetivo</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Clientes sem equipe capacitada</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Alta frustração dos servidores</li>
+                            <li style="color: #475569; font-size: 0.85em;">Power BI resolveria com menor custo</li>
                         </ul>
                     </div>
+
+                    <!-- Riscos -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Riscos</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Desperdício de recursos públicos</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Desgaste de imagem</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Ferramentas subutilizadas</li>
+                            <li style="color: #475569; font-size: 0.85em;">ROI negativo para o cliente</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Plano de Mitigação</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Não renovar contrato</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Validação prévia de capacidade</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 5px;">Treinamento obrigatório pré-venda</li>
+                            <li style="color: #475569; font-size: 0.85em;">Métricas de adoção como KPI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Lição Aprendida</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Reestruturar modelo de oferta para entes públicos: avaliar maturidade antes da venda, exigir treinamento pré-implantação e incluir métricas de adoção como KPI contratual.</p>
                 </div>
             </div>
         </div>
@@ -1155,141 +1194,176 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>⚙️ Dificuldades Internas</h2>
-            <div class="content-scroll">
-                <div class="card danger">
-                    <h3>🔄 Problema 1: Comunicação Cruzada</h3>
-                    <p><strong>Entre times:</strong> Comercial, Projetos e IA</p>
-                    <ul>
-                        <li>Indefinição de limites e responsabilidades claras</li>
-                        <li>"Disse-me-disse" frequente com clientes</li>
-                        <li>Comunicação cruzada gerando conflitos internos</li>
-                        <li>Retrabalho constante e perda de credibilidade</li>
-                    </ul>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Dificuldades Internas</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Comunicação e Contratação</p>
                 </div>
 
-                <div class="card success" style="margin-top: 20px;">
-                    <h3>✅ Solução Proposta</h3>
-                    <div class="grid-2">
-                        <ul>
-                            <li><strong>Matriz RACI formal</strong> definindo responsabilidades</li>
-                            <li>Cliente tem <strong>um único ponto de contato</strong></li>
+                <!-- Grid 2 colunas principais -->
+                <div class="grid-2" style="width: 100%; gap: 24px;">
+                    <!-- Problema 1: Comunicação -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Problema: Comunicação Cruzada</p>
+                        <p style="color: #475569; font-size: 0.9em; margin-bottom: 12px;"><strong style="color: #1e293b;">Entre times:</strong> Comercial, Projetos e IA</p>
+                        <ul style="margin-left: 16px; margin-bottom: 15px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">Indefinição de responsabilidades</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">"Disse-me-disse" com clientes</li>
+                            <li style="color: #475569; font-size: 0.85em;">Retrabalho e perda de credibilidade</li>
                         </ul>
-                        <ul>
-                            <li>Times IA/Projetos falam via Comercial apenas</li>
-                            <li>Rituais de alinhamento semanal obrigatórios</li>
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px; margin-top: 15px; padding-top: 12px; border-top: 1px solid #e2e8f0;">Solução</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">Matriz RACI formal</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">Cliente com ponto único de contato</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">IA conversa com Projetos (escopo)</li>
+                            <li style="color: #475569; font-size: 0.85em;">Comercial vende e repassa</li>
+                        </ul>
+                    </div>
+
+                    <!-- Problema 2: Perfil Faltante -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">Problema: Perfil Faltante</p>
+                        <p style="color: #1e293b; font-size: 1em; font-weight: 700; margin-bottom: 10px;">Analista de Requisitos de IA</p>
+                        <ul style="margin-left: 16px; margin-bottom: 15px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;"><strong>Planejado:</strong> Jul/2025</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;"><strong>Situação:</strong> Contratação imediata</li>
+                            <li style="color: #475569; font-size: 0.85em;"><strong>Impacto:</strong> Dificuldades na Proderj</li>
+                        </ul>
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 8px; margin-top: 15px; padding-top: 12px; border-top: 1px solid #e2e8f0;">Competências Esperadas</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">Traduzir negócio para requisitos IA</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 4px;">Desenhar e validar casos de uso</li>
+                            <li style="color: #475569; font-size: 0.85em;">Interface stakeholders/devs</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card warning" style="margin-top: 20px;">
-                    <h3>👥 Problema 2: Perfil Faltante</h3>
-                    <h4>Analista de Requisitos de IA</h4>
-                    <p><strong>Status:</strong> Planejado desde julho/2024</p>
-                    <p><strong>Situação:</strong> Contratação segurada aguardando vitória Ata Rio</p>
-                    <p><strong>Impacto:</strong> Já sentimos dificuldades operacionais na Proderj</p>
-                    <p style="margin-top: 10px;"><strong>Competências Esperadas:</strong></p>
-                    <ul>
-                        <li>Tradução de necessidades de negócio para requisitos IA</li>
-                        <li>Desenho e validação de casos de uso</li>
-                        <li>Interface entre stakeholders e desenvolvedores</li>
-                    </ul>
-                    <p style="margin-top: 10px; font-weight: 700; color: #f59e0b;">⚡ PRIORIDADE: ALTA - Contratar imediatamente após Ata Rio</p>
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 20px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Prioridade Alta</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Contratar Analista de Requisitos de IA imediatamente (Ata Rio já conquistada desde Dez/2025). Implementar Matriz RACI para eliminar ruídos de comunicação entre times.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 15: Estratégia 2025 -->
+        <!-- Slide 15: Estratégia 2026 -->
         <div class="slide">
             <div class="slide-number">15/18</div>
             <div class="logo">
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>🎯 Estratégia 2025</h2>
-            <div class="content-scroll">
-                <div class="grid-2">
-                    <div class="card success">
-                        <h3>1️⃣ Soberania Tecnológica</h3>
-                        <ul>
-                            <li>Deploy de modelos próprios</li>
-                            <li>Redução de dependência externa</li>
-                            <li>Compliance nativo desde o design</li>
-                            <li>Controle total da infraestrutura</li>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Estratégia 2026</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Pilares Estratégicos do Time de IA</p>
+                </div>
+
+                <!-- Grid 4 colunas -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; width: 100%;">
+                    <!-- Soberania Tecnológica -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.6em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">1. Soberania Tecnológica</p>
+                        <ul style="margin-left: 14px;">
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Deploy de modelos próprios</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Redução dependência externa</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Compliance nativo</li>
+                            <li style="color: #475569; font-size: 0.8em;">Controle da infraestrutura</li>
                         </ul>
                     </div>
 
-                    <div class="card blue">
-                        <h3>2️⃣ Governança e Compliance</h3>
-                        <ul>
-                            <li>ComplianceNow como diferencial</li>
-                            <li>Certificações e auditorias regulares</li>
-                            <li>Transparência em todos processos</li>
-                            <li>Ética como pilar fundamental</li>
+                    <!-- Governança e Compliance -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.6em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">2. Governança</p>
+                        <ul style="margin-left: 14px;">
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">ComplianceNow diferencial</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Auditorias regulares</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Transparência total</li>
+                            <li style="color: #475569; font-size: 0.8em;">Ética como pilar</li>
                         </ul>
                     </div>
 
-                    <div class="card purple">
-                        <h3>3️⃣ Escala Operacional</h3>
-                        <ul>
-                            <li>Processos padronizados documentados</li>
-                            <li>Documentação técnica completa</li>
-                            <li>Replicabilidade de soluções</li>
-                            <li>Automação de rotinas repetitivas</li>
+                    <!-- Escala Operacional -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.6em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">3. Escala Operacional</p>
+                        <ul style="margin-left: 14px;">
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Processos padronizados</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Documentação completa</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Soluções replicáveis</li>
+                            <li style="color: #475569; font-size: 0.8em;">Automação de rotinas</li>
                         </ul>
                     </div>
 
-                    <div class="card warning">
-                        <h3>4️⃣ Excelência em Entrega</h3>
-                        <ul>
-                            <li>Time estruturado e especializado</li>
-                            <li>Comunicação clara com clientes</li>
-                            <li>ROI mensurável e demonstrável</li>
-                            <li>Acompanhamento pós-implantação</li>
+                    <!-- Excelência em Entrega -->
+                    <div style="background: white; padding: 22px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.6em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 10px;">4. Excelência em Entrega</p>
+                        <ul style="margin-left: 14px;">
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Time especializado</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">Comunicação clara</li>
+                            <li style="color: #475569; font-size: 0.8em; margin-bottom: 5px;">ROI mensurável</li>
+                            <li style="color: #475569; font-size: 0.8em;">Acompanhamento pós-go-live</li>
                         </ul>
                     </div>
+                </div>
+
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 25px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Visão 2026</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.9em; line-height: 1.6;">Consolidar a Bravonix como referência nacional em IA para o setor público com compliance nativo, soberania tecnológica e excelência operacional.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 16: Próximos Passos -->
+        <!-- Slide 16: Roadmap 2026 -->
         <div class="slide">
             <div class="slide-number">16/18</div>
             <div class="logo">
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>📅 Roadmap 2025</h2>
-            <div class="content-scroll">
-                <div class="card success">
-                    <h3>Q1 2025 (Jan-Mar)</h3>
-                    <ul>
-                        <li>☐ <strong>CRÍTICO:</strong> Aquisição de servidor GPU</li>
-                        <li>☐ Contratação de Analista de Requisitos IA</li>
-                        <li>☐ Finalização completa treinamento IBM</li>
-                        <li>☐ Descontinuação oficial BravoBot</li>
-                        <li>☐ Fechamento escopo BravoSim com IPMJP</li>
-                        <li>☐ Realocação Arthur - foco SmartITBI</li>
-                    </ul>
+
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Roadmap 2026</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Planejamento de Entregas por Trimestre</p>
                 </div>
 
-                <div class="card blue" style="margin-top: 20px;">
-                    <h3>Q2 2025 (Abr-Jun)</h3>
-                    <ul>
-                        <li>☐ Deploy e testes do primeiro modelo interno</li>
-                        <li>☐ Implementação Matriz RACI inter-times</li>
-                        <li>☐ Refinamento de métricas ComplianceNow</li>
-                        <li>☐ Kick-off oficial projetos Ata Rio</li>
-                        <li>☐ Validação Comitê - ComplianceNow</li>
-                        <li>☐ Migração gradual de clientes para modelos próprios</li>
-                    </ul>
+                <!-- Grid 2 colunas -->
+                <div class="grid-2" style="width: 100%; gap: 24px;">
+                    <!-- Q1 2026 -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 12px;">Q1 2026 (Jan-Mar)</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Contratação Analista de Requisitos IA</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Finalização treinamento IBM</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Fechamento escopo BravoSim (IPMJP)</li>
+                            <li style="color: #475569; font-size: 0.9em;">Implementação Matriz RACI inter-times</li>
+                        </ul>
+                    </div>
+
+                    <!-- Q2 2026 -->
+                    <div style="background: white; padding: 24px; border-radius: 14px; text-align: left; border: 1px solid #e2e8f0; border-top: 4px solid #8b5cf6;">
+                        <p style="font-size: 0.65em; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; color: #8b5cf6; margin-bottom: 12px;">Q2 2026 (Abr-Jun)</p>
+                        <ul style="margin-left: 16px;">
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Aquisição de servidor GPU</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Descontinuação BravoBot (alinhada c/ clientes)</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Realocação Arthur (passagem de conhecimento)</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Deploy primeiro modelo interno</li>
+                            <li style="color: #475569; font-size: 0.9em; margin-bottom: 8px;">Validação Comitê - ComplianceNow</li>
+                            <li style="color: #475569; font-size: 0.9em;">Migração clientes para modelos próprios</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="hero-gradient" style="margin-top: 20px;">
-                    <h3 style="color: white; margin-top: 0;">🎯 Meta Anual 2025</h3>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.3em; font-weight: 600; text-align: center; padding: 10px 0;">
-                        Consolidar a Bravonix como <strong>referência nacional em IA para o setor público brasileiro</strong> com compliance nativo, soberania tecnológica e excelência operacional.
-                    </p>
+                <!-- Card Destaque -->
+                <div style="background: #0f172a; border: 2px solid #8b5cf6; border-radius: 14px; padding: 20px 28px; margin-top: 25px; width: 100%;">
+                    <h4 style="font-weight: 700; color: #8b5cf6; margin: 0 0 10px 0; font-size: 1em;">Meta Anual 2026</h4>
+                    <p style="color: #e2e8f0; margin: 0; font-size: 0.95em; line-height: 1.6;">Consolidar a Bravonix como <strong style="color: white;">referência nacional em IA para o setor público brasileiro</strong> com compliance nativo, soberania tecnológica e excelência operacional.</p>
                 </div>
             </div>
         </div>
@@ -1301,49 +1375,65 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>📋 Ata Rio de Janeiro</h2>
-            <div class="content-scroll">
-                <div class="card success">
-                    <h3>Status da Preparação</h3>
-                    <p style="font-size: 1.1em;">Time estruturado e pronto para atendimento imediato das demandas da Ata Proderj</p>
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Ata Rio de Janeiro</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Conquistada em Dezembro/2025 - Proderj</p>
                 </div>
 
-                <div class="grid-2" style="margin-top: 20px;">
-                    <div class="card blue">
-                        <h3>✅ Recursos Prontos</h3>
-                        <ul>
-                            <li>Estrutura de time completa e organizada</li>
-                            <li>Portfólio robusto de soluções validadas</li>
-                            <li>Processos CI/CD maduros em produção</li>
-                            <li>Parceria IBM estabelecida e ativa</li>
-                            <li>Catálogo de produtos online (bravonix.ia.br)</li>
+                <!-- Cards em grid-3 -->
+                <div class="grid-3" style="width: 100%; max-width: 1100px; gap: 20px; margin-bottom: 20px;">
+                    <!-- Recursos Prontos -->
+                    <div style="background: white; border-radius: 12px; padding: 20px; border-top: 4px solid #8b5cf6;">
+                        <h3 style="color: #1e293b; font-size: 1.1em; margin-bottom: 15px; font-weight: 700;">Recursos Prontos</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Estrutura de time completa</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Portfólio de soluções validadas</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• CI/CD maduro em produção</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Parceria IBM ativa</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 0;">• Catálogo online (bravonix.ia.br)</li>
                         </ul>
                     </div>
 
-                    <div class="card warning">
-                        <h3>⏳ Em Andamento</h3>
-                        <ul>
-                            <li>Finalização treinamento IBM Watsonx</li>
-                            <li>Processo seletivo Analista Requisitos</li>
-                            <li>Aquisição GPU (mitigação de riscos)</li>
-                            <li>Padronização processos internos</li>
-                            <li>Documentação técnica completa</li>
+                    <!-- Riscos -->
+                    <div style="background: white; border-radius: 12px; padding: 20px; border-top: 4px solid #8b5cf6;">
+                        <h3 style="color: #1e293b; font-size: 1.1em; margin-bottom: 15px; font-weight: 700;">Riscos</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Capacidade de atendimento limitada</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Demanda superior à estrutura atual</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Dependência de treinamento IBM</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Watson processa fora do Brasil</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 0;">• Processos em padronização</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plano de Mitigação -->
+                    <div style="background: white; border-radius: 12px; padding: 20px; border-top: 4px solid #8b5cf6;">
+                        <h3 style="color: #1e293b; font-size: 1.1em; margin-bottom: 15px; font-weight: 700;">Plano de Mitigação</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Contratação imediata de Analista</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Priorização treinamento IBM Q1</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Solução de processamento no Brasil</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Documentação técnica completa</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 0;">• Implementação Matriz RACI</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="highlight" style="margin-top: 20px;">
-                    <h3>🎯 Demandas Esperadas da Ata</h3>
-                    <div class="grid-2">
-                        <ul>
-                            <li>Desenvolvimento de assistentes especializados</li>
-                            <li>Integração com plataformas governamentais</li>
-                            <li>Soluções de compliance e governança</li>
+                <!-- Card de destaque -->
+                <div style="background: #0f172a; border-radius: 12px; padding: 20px; width: 100%; max-width: 1100px; border: 1px solid #8b5cf6;">
+                    <h3 style="color: #8b5cf6; font-size: 1.1em; margin-bottom: 12px; font-weight: 700;">Demandas Esperadas da Ata</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 6px;">• Assistentes especializados</li>
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 6px;">• Integração com plataformas gov</li>
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 0;">• Compliance e governança</li>
                         </ul>
-                        <ul>
-                            <li>Analytics avançado e processamento de dados</li>
-                            <li>Automação de processos complexos com IA</li>
-                            <li>Consultoria em transformação digital</li>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 6px;">• Analytics e processamento de dados</li>
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 6px;">• Automação de processos com IA</li>
+                            <li style="color: #e2e8f0; font-size: 0.85em; margin-bottom: 0;">• Consultoria em transformação digital</li>
                         </ul>
                     </div>
                 </div>
@@ -1357,43 +1447,47 @@
                 <img class="logo-icon" src="icon-bravonix-mini.png" alt="Bravonix">
                 <div class="logo-text">BRAVONIX <span class="ai">AI</span></div>
             </div>
-            <h2>🎯 Conclusão</h2>
-            <div class="content-scroll">
-                <div class="hero-gradient">
-                    <h3 style="color: white; margin-top: 0;">Retrospectiva 2024</h3>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.15em;">Encerramento com carteira robusta de soluções, estrutura organizacional clara e aprendizados estratégicos valiosos</p>
+            <div class="content-scroll" style="display: flex; flex-direction: column; align-items: center; overflow: hidden;">
+                <!-- Título centralizado -->
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h2 style="border: none; padding-bottom: 12px; margin-bottom: 12px; font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px; border-bottom: 3px solid #8b5cf6; display: inline-block;">Conclusão</h2>
+                    <p style="color: #94a3b8; font-size: 1em; margin-top: 8px;">Retrospectiva 2025 e Perspectivas 2026</p>
                 </div>
 
-                <div class="grid-2" style="margin-top: 20px;">
-                    <div class="card success">
-                        <h3>✨ Principais Conquistas</h3>
-                        <ul>
-                            <li><strong>7 produtos</strong> ativos em produção</li>
-                            <li><strong>9 profissionais</strong> especializados estruturados</li>
-                            <li>Múltiplos <strong>clientes públicos</strong> atendidos</li>
-                            <li><strong>Infraestrutura moderna</strong> com CI/CD</li>
-                            <li><strong>Parceria IBM</strong> estabelecida</li>
-                            <li><strong>Catálogo online</strong> de soluções</li>
+                <!-- Cards em grid-2 -->
+                <div class="grid-2" style="width: 100%; max-width: 1100px; gap: 20px; margin-bottom: 20px;">
+                    <!-- Conquistas 2025 -->
+                    <div style="background: white; border-radius: 12px; padding: 20px; border-top: 4px solid #8b5cf6;">
+                        <h3 style="color: #1e293b; font-size: 1.1em; margin-bottom: 15px; font-weight: 700;">Conquistas 2025</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>7 produtos</strong> ativos em produção</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>9 profissionais</strong> especializados</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• Múltiplos <strong>clientes públicos</strong> atendidos</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Infraestrutura CI/CD</strong> moderna</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Parceria IBM</strong> estabelecida</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 0;">• <strong>Ata Rio</strong> conquistada</li>
                         </ul>
                     </div>
 
-                    <div class="card warning">
-                        <h3>🎯 Desafios Estratégicos 2025</h3>
-                        <ul>
-                            <li><strong>Soberania tecnológica</strong> via GPU próprio</li>
-                            <li><strong>Fortalecimento IBM</strong> com treinamento</li>
-                            <li><strong>Processos escaláveis</strong> documentados</li>
-                            <li><strong>Contratação estratégica</strong> de requisitos</li>
-                            <li><strong>Execução Ata Rio</strong> com excelência</li>
-                            <li><strong>Compliance nativo</strong> em todas soluções</li>
+                    <!-- Desafios 2026 -->
+                    <div style="background: white; border-radius: 12px; padding: 20px; border-top: 4px solid #8b5cf6;">
+                        <h3 style="color: #1e293b; font-size: 1.1em; margin-bottom: 15px; font-weight: 700;">Desafios 2026</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Fortalecimento IBM</strong> com treinamento</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Processos escaláveis</strong> documentados</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Contratação estratégica</strong> de Analista</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Execução Ata Rio</strong> com excelência</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 8px;">• <strong>Compliance nativo</strong> em soluções</li>
+                            <li style="color: #475569; font-size: 0.85em; margin-bottom: 0;">• <strong>Soberania tecnológica</strong> via GPU</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card blue" style="margin-top: 20px; text-align: center; padding: 40px;">
-                    <h3 style="margin-top: 0; font-size: 1.8em;">🚀 Visão de Futuro</h3>
-                    <p style="font-size: 1.3em; font-weight: 600; line-height: 1.6; margin-top: 20px;">
-                        Consolidar a Bravonix como <strong style="color: #3b82f6;">referência nacional em IA para o setor público</strong> 
+                <!-- Card de destaque - Visão de Futuro -->
+                <div style="background: #0f172a; border-radius: 12px; padding: 30px; width: 100%; max-width: 1100px; border: 1px solid #8b5cf6; text-align: center;">
+                    <h3 style="color: #8b5cf6; font-size: 1.3em; margin-bottom: 15px; font-weight: 700;">Visão de Futuro</h3>
+                    <p style="color: #e2e8f0; font-size: 1.1em; line-height: 1.7; margin: 0;">
+                        Consolidar a Bravonix como <strong style="color: #8b5cf6;">referência nacional em IA para o setor público</strong>
                         com compliance nativo, excelência técnica e impacto mensurável na transformação digital do Brasil.
                     </p>
                 </div>
